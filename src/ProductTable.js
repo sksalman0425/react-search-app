@@ -5,7 +5,7 @@ import ProductRow from "./ProductRow";
 //if we are giving other name of variable then put it in {} as shown in below example. 
 const ProductTable = ({ PTproducts, filterText, inStockOnly }) => {
   console.log(
-    "Inside ProductTable Coponent props recieved",
+    "Inside ProductTable Component props recieved",
     PTproducts,
     filterText,
     inStockOnly

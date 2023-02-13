@@ -1,5 +1,5 @@
 const ProductRow = ({ product, key }) => {
-  // const { product, key } = props;
+  // const { product, key } = props; or we can directly recieved props in the variable as shown above 
   const name = product.stocked ? (
     product.name
   ) : (

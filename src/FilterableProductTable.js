@@ -12,10 +12,14 @@ const FilterableProductTable = ({ FPTproducts }) => {
   const [filterText, setFilterText]=useState("");
   // Above initial value is null
   const [inStockOnly,setInstockOnly]=useState(false);
+  // in changedValue argument we are getting value from search box by i.e. by child componant using event.target.value 
+  // and assigning it to filterText state variable
   const onFilterTextChanged = (changedValue) => {
     console.log("Value recieved from Search bar component", changedValue);
     setFilterText(changedValue);
   };
+    // in changedValue argument we are getting value from  checkbox i.e. by child componant using event.target.checked 
+  // and assigning it to inStockOnly state variable
   const onIsStockOnlyChanged = (changedValue) => {
     console.log("Value recieved from Search bar component", changedValue);
     setInstockOnly(changedValue);
@@ -26,8 +30,8 @@ const FilterableProductTable = ({ FPTproducts }) => {
       <SearchBar
         filterText={filterText}
         inStockOnly={inStockOnly}
-        onFilterTextChanged={onFilterTextChanged}
-        onIsStockOnlyChanged={onIsStockOnlyChanged}
+        onFilterTextChanged={onFilterTextChanged}//here we passing function name as attribute
+        onIsStockOnlyChanged={onIsStockOnlyChanged}//here we passing function name as attribute
       />
       <ProductTable
         PTproducts={FPTproducts}
