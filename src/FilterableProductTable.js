@@ -2,12 +2,12 @@ import ProductTable from "./ProductTable";
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 
-const FilterableProductTable = ({ products }) => {
-  // we can write props or other variable name directly which we have to assign
-  // .i.e. here products.this is latest method which is widely used. 
+const FilterableProductTable = ({ FPTproducts }) => {
+  // we can write props or other variable name(if other variable taken then put it in {} here FTPproducts) directly which we have to assign/recieve props.FPTproducts
+  // .i.e. here FTPproducts.this is latest method which is widely used. 
   //  console.log("Props recieved::::", props);
-  //   const products=props.products;
-  //   const { products } = props;
+  //   const  FPTproducts=props. FPTproducts;
+  //   const {  FPTproducts } = props;
   //here we use usestate bz it is parent component of both searchBar and ProductTable
   const [filterText, setFilterText]=useState("");
   // Above initial value is null
@@ -30,7 +30,7 @@ const FilterableProductTable = ({ products }) => {
         onIsStockOnlyChanged={onIsStockOnlyChanged}
       />
       <ProductTable
-        products={products}
+        PTproducts={FPTproducts}
         filterText={filterText}
         inStockOnly={inStockOnly}
       />

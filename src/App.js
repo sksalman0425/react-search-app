@@ -1,5 +1,6 @@
 
 import './App.css';
+import './index.css';//bydault it apply to all component even if it is not imported
 import FilterableProductTable from './FilterableProductTable';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FilterableProductTable products={PRODUCTS}/>
+        <FilterableProductTable FPTproducts={PRODUCTS}/>
       </header>
     </div>
   );
